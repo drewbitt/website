@@ -1,22 +1,34 @@
 <template>
   <Layout>
 
+    <h1 v-html="$page.home.edges[0].node.data.intro" />
+
+    <p v-html="$page.home.edges[0].node.data.content" />
+
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+    <g-image alt="Home Image" :src="$page.home.edges[0].node.data.photo" />
 
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
+    <p v-html="$page.home.edges[0].node.data.more_content" />
 
   </Layout>
 </template>
+
+<page-query>
+query {
+	home: allButterPages(page:1){
+    edges {
+      node {
+        data {
+          intro
+          content
+          photo
+          more_content
+        }
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 export default {
@@ -25,9 +37,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>

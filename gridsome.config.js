@@ -6,5 +6,15 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: "gridsome-source-buttercms",
+      options: {
+          authToken: process.env.VUE_APP_BUTTERCMS_API_KEY,
+          collections: [''],
+          pages: 'home',
+          pageTypes: ''
+        }
+    }
+  ]
 }
