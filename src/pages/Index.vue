@@ -5,7 +5,6 @@
 
     <p v-html="$page.home.edges[0].node.data.content" />
 
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Home Image" :src="$page.home.edges[0].node.data.photo" />
 
     <p v-html="$page.home.edges[0].node.data.more_content" />
@@ -33,7 +32,7 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Home'
   }
 }
 </script>
