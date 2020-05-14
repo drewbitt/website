@@ -4,8 +4,7 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "publish": "yarn build && surge dist/"
+    "explore": "gridsome explore"
   },
   "dependencies": {
     "gridsome": "^0.7.0",
