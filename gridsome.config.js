@@ -15,6 +15,9 @@ module.exports = {
           pages: 'home',
           pageTypes: ''
         }
-    }
-  ]
+    },
+  ],
+  templates: {
+    ButterPosts: '/blog/tech/:slug',
+  }
 }
