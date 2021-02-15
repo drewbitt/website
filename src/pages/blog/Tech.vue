@@ -6,14 +6,17 @@
     <section class="posts">
       <PostList v-for="edge in $page.allButterPosts.edges" :key="edge.node.id" :post="edge.node" />
     </section>
+    <BlogFooter />
   </Layout>
 </template>
 
 <script>
 import PostList from "@/components/BlogPostList";
+import BlogFooter from "@/components/Footer";
 export default {
   components: {
-    PostList
+    PostList,
+    BlogFooter
   },
   metaInfo: {
     title: 'Tech'
